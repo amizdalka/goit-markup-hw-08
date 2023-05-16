@@ -1,0 +1,62 @@
+.team {
+    background-color: #f5f4fa;
+    padding: 94px 0;
+    &__list {
+        display: flex;
+        gap: 30px;
+        margin-top: 50px;
+    }
+    &__item {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    &__description {
+        padding: 30px;
+        text-align: center;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__name {
+        color: $primaryFontColor;
+        font-weight: 500;
+        text-align: center;
+
+        font-size: 16px;
+        line-height: 1.19;
+        margin-bottom: 10px;
+    }
+    &__profession {
+        color: $secondaryFontColor;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.19;
+    }
+    &__icon-list {
+        display: flex;
+        flex-direction: row;
+        min-width: 182px;
+        gap: 10px;
+    }
+    &__link-icon {
+        padding: 12px;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        transition: background-color $primaryTransition;
+        & > svg {
+            width: 20px;
+            height: 20px;
+            fill: $iconColor;
+            transition: fill $primaryTransition;
+        }
+        &:is(:hover, :focus) {
+            background-color: $brandColor;
+        }
+        &:is(:hover, :focus) > svg {
+            fill: white;
+        }
+    }
+}

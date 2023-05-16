@@ -1,0 +1,25 @@
+.our-customers {
+    padding: 94px 0;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 170px;
+        height: 92px;
+        fill: $iconColor;
+        border: 1px solid $iconColor;
+        border-radius: 4px;
+        transition: fill $primaryTransition, border $primaryTransition;
+        &:hover,
+        &:focus {
+            fill: $brandColor;
+            cursor: pointer;
+            border: 1px solid $brandColor;
+        }
+    }
+}

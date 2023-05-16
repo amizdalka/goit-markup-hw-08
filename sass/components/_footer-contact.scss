@@ -1,0 +1,75 @@
+.footer-contact {
+    background-color: $backgroundColor;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &__container {
+        max-width: 1200px;
+        display: flex;
+        gap: 60px;
+        justify-content: flex-start;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        margin-top: 20px;
+    }
+    &__address {
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.71;
+
+        letter-spacing: 0.03em;
+        font-style: normal;
+    }
+    &__contact {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+        line-height: 1.71;
+
+        text-decoration: none;
+        letter-spacing: 0.03em;
+        font-style: normal;
+        transition: color $primaryTransition;
+        &:hover,
+        &:focus {
+            color: $brandColor;
+        }
+    }
+}
+.join-us {
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        color: #fff;
+        margin-left: 5px;
+        margin-bottom: 20px;
+    }
+    &__list {
+        display: flex;
+    }
+    &__icon {
+        height: 44px;
+        width: 44px;
+
+        padding: 12px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        margin: 0 5px;
+        transition: background-color $primaryTransition;
+        & > svg {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+        }
+        &:hover,
+        &:focus {
+            background-color: $brandColor;
+        }
+    }
+}
