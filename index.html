@@ -58,7 +58,71 @@
                     >
                 </div>
             </div>
+            <!-- mobilny header/////////////////////////// -->
+
+            <div class="mobile-header-container">
+                <a href="./index.html" class="logo"
+                    >Web<span class="logo__black">Studio</span></a
+                >
+                <button
+                    class="menu-toggle js-open-menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                >
+                    <svg width="40" height="40" class="menu-toggle__icon">
+                        <use href="./images/icons.svg#icon-menu40px"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="menu-container js-menu-container" id="mobile-menu">
+                <button class="menu-toggle js-close-menu">
+                    <svg width="40" height="40" class="menu-toggle__icon">
+                        <use href="./images/icons.svg#icon-close40px"></use>
+                    </svg>
+                </button>
+
+                <ul class="mobile-menu">
+                    <li>
+                        <a href="./index.html" class="mobile-menu__link"
+                            >Agencja</a
+                        >
+                    </li>
+                    <li>
+                        <a href="./portfolio.html" class="mobile-menu__link"
+                            >Portfolio</a
+                        >
+                    </li>
+                    <li><a href="" class="mobile-menu__link">Kontakt</a></li>
+                </ul>
+                <div class="mobile-contact">
+                    <a href="tel:+48111111111" class="mobile-contact__tel">
+                        +48 111 111 111</a
+                    >
+                    <a
+                        href="mailto:info@devstudio.com"
+                        class="mobile-contact__mail"
+                    >
+                        info@devstudio.com</a
+                    >
+                </div>
+                <ul class="mobile-social">
+                    <li class="mobile-social__item">
+                        <a href="" class="mobile-social__link">Instagram</a>
+                    </li>
+                    <li class="mobile-social__item">
+                        <a href="" class="mobile-social__link">Twitter</a>
+                    </li>
+                    <li class="mobile-social__item">
+                        <a href="" class="mobile-social__link">Facebook</a>
+                    </li>
+                    <li class="mobile-social__item">
+                        <a href="" class="mobile-social__link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </header>
+
         <main>
             <section class="solutions">
                 <h1 class="solutions__title">
@@ -72,7 +136,7 @@
             <section>
                 <div class="container">
                     <ul class="offer">
-                        <li>
+                        <li class="offer__box">
                             <svg class="offer__item">
                                 <use
                                     href="./images/icons.svg#icon-antenna"
@@ -86,7 +150,7 @@
                                 sodales dui. Interdum et malesuada
                             </p>
                         </li>
-                        <li>
+                        <li class="offer__box">
                             <svg class="offer__item">
                                 <use href="./images/icons.svg#icon-clock"></use>
                             </svg>
@@ -98,7 +162,7 @@
                                 sodales dui. Interdum et malesuada
                             </p>
                         </li>
-                        <li>
+                        <li class="offer__box">
                             <svg class="offer__item">
                                 <use
                                     href="./images/icons.svg#icon-diagram"
@@ -111,7 +175,7 @@
                                 sodales dui. Interdum et malesuada
                             </p>
                         </li>
-                        <li>
+                        <li class="offer__box">
                             <svg class="offer__item">
                                 <use
                                     href="./images/icons.svg#icon-astronaut"
@@ -130,7 +194,9 @@
 
             <section>
                 <div class="container">
-                    <h2 class="section-title">Czym się zajmujemy</h2>
+                    <h2 class="section-title mobile-none">
+                        Czym się zajmujemy
+                    </h2>
                     <ul class="services">
                         <li>
                             <div class="services__image">
@@ -180,10 +246,17 @@
                         <li>
                             <figure class="team__item">
                                 <img
-                                    src="images/product-designer.jpg"
+                                    src="images/product-designer450.jpg"
+                                    srcset="
+                                        images/product-designer450.jpg    450w,
+                                        images/product-designer450@2x.jpg 900w,
+                                        images/product-designer354.jpg    354w,
+                                        images/product-designer354@2x.jpg 708w,
+                                        images/product-designer270.jpg    270w,
+                                        images/product-designer270@2x.jpg 540w
+                                    "
                                     alt="Mężczyzna w okularach"
-                                    width="270"
-                                    height="260"
+                                    sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                                 />
                                 <figcaption class="team__description">
                                     <span class="team__name">John Doe</span>
@@ -253,10 +326,17 @@
                         <li>
                             <figure class="team__item">
                                 <img
-                                    src="images/frontend-developer.jpg"
+                                    src="images/frontend-developer450.jpg"
                                     alt="Kobieta w okularach"
-                                    width="270"
-                                    height="260"
+                                    srcset="
+                                        images/frontend-developer450.jpg    450w,
+                                        images/frontend-developer450@2x.jpg 900w,
+                                        images/frontend-developer354.jpg    354w,
+                                        images/frontend-developer354@2x.jpg 708w,
+                                        images/frontend-developer270.jpg    270w,
+                                        images/frontend-developer270@2x.jpg 540w
+                                    "
+                                    sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                                 />
                                 <figcaption class="team__description">
                                     <span class="team__name">John Doe</span>
@@ -326,10 +406,17 @@
                         <li>
                             <figure class="team__item">
                                 <img
-                                    src="images/marketing-specialist.jpg"
+                                    src="images/marketing-specialist450.jpg"
                                     alt="Mężczyzna w koszuli"
-                                    width="270"
-                                    height="260"
+                                    srcset="
+                                        images/marketing-specialist450.jpg    450w,
+                                        images/marketing-specialist450@2x.jpg 900w,
+                                        images/marketing-specialist354.jpg    354w,
+                                        images/marketing-specialist354@2x.jpg 708w,
+                                        images/marketing-specialist270.jpg    270w,
+                                        images/marketing-specialist270@2x.jpg 540w
+                                    "
+                                    sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                                 />
                                 <figcaption class="team__description">
                                     <span class="team__name">John Doe</span>
@@ -399,10 +486,17 @@
                         <li>
                             <figure class="team__item">
                                 <img
-                                    src="images/ui-designer.jpg"
+                                    src="images/ui-designer450.jpg"
                                     alt="UI Designer"
-                                    width="270"
-                                    height="260"
+                                    srcset="
+                                        images/ui-designer450.jpg    450w,
+                                        images/ui-designer450@2x.jpg 900w,
+                                        images/ui-designer354.jpg    354w,
+                                        images/ui-designer354@2x.jpg 708w,
+                                        images/ui-designer270.jpg    270w,
+                                        images/ui-designer270@2x.jpg 540w
+                                    "
+                                    sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                                 />
                                 <figcaption class="team__description">
                                     <span class="team__name">John Doe</span>
@@ -726,6 +820,13 @@
                 </form>
             </div>
         </div>
+        <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"
+        ></script>
         <script src="./js/modal.js"></script>
+        <script src="./js/mobile-menu.js"></script>
     </body>
 </html>

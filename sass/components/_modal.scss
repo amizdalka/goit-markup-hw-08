@@ -20,14 +20,18 @@
 }
 .modal {
     background-color: #fff;
-    width: 528px;
-    height: 581px;
+    width: 450px;
+    height: 609px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     position: absolute;
     transform: translateY(0);
     transition: transform 500ms ease;
+    @include desktop {
+        width: 528px;
+        height: 581px;
+    }
     &__button {
         position: absolute;
         right: 8px;
@@ -47,6 +51,10 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        &:hover,
+        &:focus {
+            fill: $brandColor;
+        }
     }
 }
 .form {
@@ -58,10 +66,14 @@
     &__heading {
         font-size: 20px;
         font-weight: 700;
-        line-height: 1.17;
+        line-height: 1.5;
         letter-spacing: 0.03em;
         margin-bottom: 2px;
         color: $primaryFontColor;
+        text-align: center;
+        @include desktop {
+            line-height: 1.17;
+        }
     }
     &__label {
         display: flex;
@@ -88,11 +100,14 @@
     &__phone-input,
     &__email-input {
         height: 40px;
-        width: 448px;
+        width: 370px;
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
         padding-left: 42px;
         transition: border-color $primaryTransition;
+        @include desktop {
+            width: 448px;
+        }
     }
     &__name-input:focus-within,
     &__phone-input:focus-within,
@@ -107,10 +122,13 @@
     }
     &__comment-input {
         height: 120px;
-        width: 448px;
+        width: 370px;
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
         resize: none;
+        @include desktop {
+            width: 448px;
+        }
         &::placeholder {
             font-size: 12px;
             line-height: 1.16;
@@ -148,10 +166,14 @@
         }
     }
     &__accept {
-        font-size: 14px;
-        line-height: 1.71;
+        font-size: 12px;
+        line-height: 1.17;
         letter-spacing: 0.03em;
         color: $secondaryFontColor;
+        @include desktop {
+            font-size: 14px;
+            line-height: 1.71;
+        }
     }
     &__terms {
         color: $brandColor;

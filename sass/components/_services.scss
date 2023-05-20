@@ -1,23 +1,37 @@
 .services {
-    display: flex;
-    gap: 30px;
-    padding-bottom: 94px;
+    display: none;
+    @include desktop {
+        display: flex;
+        gap: 30px;
+        padding-bottom: 94px;
+    }
+
     &__image {
-        position: relative;
+        @include desktop {
+            position: relative;
+        }
     }
     &__label {
-        position: absolute;
-        bottom: 0;
-        width: 370px;
-        height: 70px;
-        color: #fff;
-        text-align: center;
-        background-color: rgba(47, 48, 58, 0.8);
-        padding: 27px;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.17;
-        text-transform: uppercase;
-        letter-spacing: 0.03em;
+        @include desktop {
+            position: absolute;
+            bottom: 0;
+            width: 370px;
+            height: 70px;
+            color: #fff;
+            text-align: center;
+            background-color: rgba(47, 48, 58, 0.8);
+            padding: 27px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.17;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+    }
+}
+.mobile-none {
+    display: none;
+    @include desktop {
+        display: block;
     }
 }
