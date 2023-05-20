@@ -1149,6 +1149,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   .newsletter-form {
@@ -1164,6 +1165,7 @@ img {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    max-width: 570px;
   }
 }
 .newsletter-form__label {
@@ -1178,6 +1180,15 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .newsletter-form__label {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    max-width: 358px;
+  }
 }
 .newsletter-form__title {
   color: #fff;
