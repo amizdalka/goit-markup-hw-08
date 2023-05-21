@@ -46,12 +46,13 @@ img {
 .section-title {
     font-weight: 700;
     font-size: 28px;
-    line-height: 1.16;
+    line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
     margin-bottom: 30px;
     @include desktop {
         font-size: 36px;
         margin-bottom: 50px;
+        line-height: 1.16;
     }
 }
